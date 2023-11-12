@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickup Line Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+        }
+
+        h1 {
+            color: #ff69b4;
+        }
+
+        #pickup-line {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        #generate-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pickup Line Generator</h1>
+    <div id="pickup-line">Are you a magician? Because whenever I look at you, everyone else disappears.</div>
+    <button id="generate-btn" onclick="generatePickupLine()">Generate Pickup Line</button>
+
+    <script>
+        const pickupLines = [
+            "Are you a magician? Because whenever I look at you, everyone else disappears.",
+            "Do you have a name or can I call you mine?",
+            "Are you a Wi-Fi signal? Because I'm feeling a connection.",
+            "Do you have a sunburn, or are you always this hot?",
+            "If you were a vegetable, you'd be a cute-cumber!",
+            // Add more pickup lines as needed
+        ];
+
+        function generatePickupLine() {
+            const pickupLineElement = document.getElementById('pickup-line');
+            const randomIndex = Math.floor(Math.random() * pickupLines.length);
+            pickupLineElement.innerText = pickupLines[randomIndex];
+        }
+    </script>
+</body>
+</html>
